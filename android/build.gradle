@@ -2,7 +2,7 @@ group 'com.flutter.moum.screenshot_callback'
 version '1.0'
 
 buildscript {
-    ext.kotlin_version = '1.6.10'
+    ext.kotlin_version = '1.8.22'
 
     repositories {
         google()
@@ -26,13 +26,13 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 33
+    compileSdkVersion 34
     namespace 'com.flutter.moum.screenshot_callback'
     defaultConfig {
         minSdkVersion 21
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-    lintOptions {
+    lint {
         disable 'InvalidPackage'
     }
 }
